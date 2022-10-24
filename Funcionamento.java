@@ -66,7 +66,7 @@ public class Funcionamento {
 		do {
 			if (contador < 4) {
 				if (x == chute.getX() && y == chute.getY()) {
-					if (contador == 3) { 
+					if (contador == 3 || contador == cAux.getX()) { 
 						if (goleiro.getForca() >= chute.getForca()) {
 							defesa = true;
 						} else { 
@@ -74,7 +74,7 @@ public class Funcionamento {
 							defesa = false;
 						}
 
-					} else if (y == cAux.getY() + somador) { 
+					} else if (y == cAux.getY() || y == cAux.getY() + somador) { 
 						if (goleiro.getForca() >= chute.getForca()) {
 							defesa = true;
 						} else { 
